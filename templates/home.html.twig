@@ -1,0 +1,10 @@
+{% extends "base.html.twig" %}
+{% block body %}
+Hello from home page {{ number }}
+<a href="{{ path("task_show",{id:1})}}">Show </a>
+<ul>
+{% for task in tasks %}
+<li>{{ task.name }}</li>
+{% endfor %}
+</ul>
+{% endblock %}
